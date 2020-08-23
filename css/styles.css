@@ -786,11 +786,12 @@ p {
 }
 
 .portfolio-product-discription {
+	position: absolute;
 	opacity: 0;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, 100%);
-	position: absolute;
+
 	width: 322px;
 	height: 168px;
 	margin-top: 0px;
@@ -838,4 +839,32 @@ p {
 .products-btn:hover .portfolio-thumb::before {
 	transform: translatey(0%);
 	opacity: 1;
+}
+.backdrop.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	background: rgba(0, 0, 0, 0.2);
+}
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	min-width: 528px;
+	min-height: 581px;
+	padding: 15px;
+
+	background-color: #fff;
+	position: absolute;
 }
